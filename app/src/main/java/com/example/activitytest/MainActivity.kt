@@ -19,6 +19,11 @@ class MainActivity : Activity() {
         btn2.setOnClickListener {
             doStaticIntent()
         }
+
+        val btn3: Button = findViewById(R.id.main_btn3)
+        btn3.setOnClickListener {
+            doResultIntent()
+        }
     }
 
     // 显式intent，通常应用在自己程序中
@@ -38,5 +43,22 @@ class MainActivity : Activity() {
         bundle.putInt("height", 170)
         intent.putExtras(bundle)
         startActivity(intent)
+    }
+
+    private fun doResultIntent() {
+        val intent = Intent()
+        intent.setClass(this, ResultActivity::class.java)
+        startActivityForResult(intent, 1)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            1 -> {
+                if (requestCode == RESULT_OK) {
+                    val b  = data?.getBooleanExtra("extra_ff", false)
+                }
+            }
+        }
     }
 }
