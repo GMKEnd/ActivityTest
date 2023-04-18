@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ActivityTest</string>
     <string name="button">Button</string>
+    <string name="main_btn1">share 1</string>
+    <string name="main_btn2">share 2</string>
     <string name="text">TestText</string>
 </resources>
