@@ -21,6 +21,7 @@ class ShareActivity : AppCompatActivity() {
 
         initView()
 
+        // 处理收到的分享内容
         val mIntent = intent
         val mAction = mIntent.action
         val mType = mIntent.type

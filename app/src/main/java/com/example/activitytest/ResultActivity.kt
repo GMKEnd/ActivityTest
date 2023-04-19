@@ -1,7 +1,7 @@
 package com.example.activitytest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -9,7 +9,7 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         val intent = intent
-        intent.putExtra("extra_ff", true)
+        intent.putExtra("result_data", "22222")
         setResult(RESULT_OK, intent)
         finish()
     }
