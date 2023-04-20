@@ -3,9 +3,9 @@
 
 ### Implemented  
 * ShareActivity接受文字等分享  
+* intent传递对象/非基础数据类型  
 * []  
 
 ### TO-DO  
 * Activity的启动模式  
-* 显式/隐式intent  
 * []
