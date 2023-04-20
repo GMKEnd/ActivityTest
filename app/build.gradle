@@ -4,10 +4,12 @@ plugins {
 }
 
 android {
+    // 应用可以使用的方法范围，使用超出范围的方法会变异错误
     compileSdk 33
 
     defaultConfig {
         applicationId "com.example.activitytest"
+        // 告知系统的应用使用范围，当系统版本高于target时可以启动兼容性措施
         minSdk 21
         targetSdk 32
         versionCode 1

@@ -2,7 +2,9 @@ package com.example.activitytest
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 
@@ -27,6 +29,10 @@ class MainActivity : Activity() {
             doResultIntent()
         }
         textView = findViewById(R.id.main_text)
+        val btn4: Button = findViewById(R.id.main_btn4)
+        btn4.setOnClickListener {
+            doPassClass()
+        }
     }
 
     // 显式intent，通常应用在自己程序中
@@ -65,5 +71,24 @@ class MainActivity : Activity() {
                 }
             }
         }
+    }
+
+    private fun doPassClass() {
+        // 被传递的类需要实现 Serializable后通过bundle传递
+        val data = AGuy()
+        data.setName("aaa")
+        data.setHeight(199)
+        Log.e("passClass", "name is:${data.getName()}, height is:${data.getHeight()}")
+        val bundle = Bundle()
+        bundle.putSerializable("data", data)
+
+        val intent = Intent()
+        if (Build.VERSION.SDK_INT >= 33) {
+            intent.putExtra("serializable", data)
+        } else {
+            intent.putExtra("bundle", bundle)
+        }
+        intent.setClass(this, ShareActivity2::class.java)
+        startActivity(intent)
     }
 }

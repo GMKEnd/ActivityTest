@@ -7,7 +7,7 @@
     tools:context=".ShareActivity2">
 
     <TextView
-        android:id="@+id/textTest"
+        android:id="@+id/share_2_textTest1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -15,5 +15,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/share_2_textTest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/text"
+        app:layout_constraintEnd_toEndOf="@+id/share_2_textTest1"
+        app:layout_constraintStart_toStartOf="@+id/share_2_textTest1"
+        app:layout_constraintTop_toBottomOf="@+id/share_2_textTest1" />
+
+    <Button
+        android:id="@+id/share_2_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/button"
+        app:layout_constraintEnd_toEndOf="@+id/share_2_textTest2"
+        app:layout_constraintStart_toStartOf="@+id/share_2_textTest2"
+        app:layout_constraintTop_toBottomOf="@+id/share_2_textTest2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
