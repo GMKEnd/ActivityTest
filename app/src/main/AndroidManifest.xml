@@ -13,27 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ActivityTest"
         tools:targetApi="31">
+
         <activity
             android:name=".ResultActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <!-- 走图标启动其实也是一种Intent启动Activity的方式 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ShareActivity"
             android:exported="true"
             android:label="ActTest">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
-
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="image/*" />
@@ -48,29 +48,26 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
-
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="image/*" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action." />
-
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ShareActivity2"
             android:exported="true"
             android:label="ActTest2">
             <intent-filter>
                 <action android:name="actionTest" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
-
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="image/*" />
